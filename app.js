@@ -66,6 +66,7 @@ app.get('/lotto', (req, res) => {
     const randomNumbers = Array.from({length: 6}, () => Math.floor(Math.random() * 20));
 
     const matchingNums = userNumbers.filter(num => num === randomNumbers.find(randomNum => randomNum === num));
+    const matchingNums2 = userNums.filter(num => randomArr.includes(num));
 
     let message = 'You lose scumbag';
      
